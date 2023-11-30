@@ -1,0 +1,59 @@
+/*/
+ * This class makes cake. It will recognize your flavor and how many layers the cake has. It will be
+ * recognized in the bakery class.
+ */
+public class Cake 
+{
+/*/
+ * A string is declared, that being the original flavor. Then layers will be classified as an int. The
+ * static int increment will be the number that adds to the layer later on. The method below will set
+ * this.layers to layers from int layers and this.flavor to flavor from String flavor.
+ */
+	String flavor = new String("Stupid");
+	int layers;
+	static int increment = 1;
+	
+	public Cake(String flavor , int layers) 
+	{
+		this.flavor = flavor;
+		this.layers = layers;
+		}
+/*/
+ * These methods will print out the flavor of the original cake and the original amount of layers,
+ * that being 1.
+ */
+		public void getFlavor() 
+		{
+			System.out.println("This cake is " + this.flavor + " flavored.");
+		}
+		public void getLayers() 
+		{
+			System.out.println("This cake has " + this.layers + " layers.");
+		}
+/*/
+ * This string requires an input to be able to print out the new flavor. That input will be your new
+ * flavor. Once it's put in the bakery class, it will recognize the flavor input and print out the
+ * Cake's new flavor.
+ */
+	public void setFlavor(String newFlavor) 
+	{
+		flavor = newFlavor;
+	}
+/*/
+ * This method prints out "The cake is yummy."
+ */
+	public void tellMeIfTasty() 
+	{
+		System.out.println("The cake is yummy.");
+	}
+/*/
+ * This method will declare this.layers as a new number. Because this.layers is originally 1, the
+ * increment will add 1 to it, setting the new this.layers to 2. Then it'll print out the new layer
+ * from the bakery class.
+ */
+	public void incrementLayer() 
+	{
+		this.layers = this.layers + increment;
+		System.out.println("The cake has " + this.layers + "layers.");
+	}
+	}
