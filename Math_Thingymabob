@@ -1,0 +1,28 @@
+/*/
+ * NO COMMENTS OMYGAH
+ */
+public class Math_things {
+
+	public static void main(String[] args) {
+	
+	int myInt = -4;
+	double myDub = -16.0;
+	
+	double mySqrt = Math.sqrt(myDub);
+	System.out.println(mySqrt);
+	
+	double myAbsDub = Math.abs(myDub);
+	System.out.println(myAbsDub);
+	
+	double myAbsInt = Math.abs(myInt);
+	System.out.println(myAbsInt);
+	
+	int base = 2;
+	int exp = 5;
+	double prod = Math.pow(base, exp);
+	System.out.println(prod);
+	
+		
+	}
+
+}
