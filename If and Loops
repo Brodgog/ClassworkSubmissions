@@ -1,0 +1,61 @@
+import java.util.Scanner;
+public class IfAndLoops {
+
+	public static void main(String[] args) {
+
+		Scanner numScan = new Scanner(System.in);
+			int x = numScan.nextInt();
+			int y = numScan.nextInt();
+			
+			printEvenOrOdd(x, y);
+			printExpTable(x, y);
+			numScan.close();
+			System.out.println("The value of the factorial is" + getFact(x));
+		}
+	private static void printEvenOrOdd(int x, int y) 
+	{
+		if ((x % 2 ==0) & (y % 2 == 0))
+		{
+			System.out.println(x + " and " + y + " are even");
+		
+		}
+		else if ((x % 2 == 0) & (y % 2 !=0))
+		{
+			System.out.println(x + " is even" + y + " is odd");
+		}
+		else if ((x % 2 != 0) & (y % 2 == 0))
+		{
+			System.out.println(x + " is odd" + y + " is even");
+		}
+		else 
+		{
+			System.out.println(x + " and " + y + " are odd");
+		}
+	}
+private static void printExpTable(int x, int y)
+	{
+		if (x<0 || y<0)
+		{
+			System.out.println("Sorry, I don't know that yet.");
+		}
+		else
+		{
+			for(int i=0; i<=y; i++)
+				System.out.println(x + " to the " + i + " is " + Math.pow(x, i));
+		}
+	}
+private static int getFact(int x)
+{
+	if (x<0)
+	{
+		System.out.println("Sorry, that won't work for the factorial calculator!");
+		return -1;
+	}
+
+		int prod = 1;
+		for(int i=1; i<=x; i++)
+			prod *=i;
+	
+return prod;
+}
+	}
