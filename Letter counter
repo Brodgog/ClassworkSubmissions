@@ -1,0 +1,25 @@
+public class test_things {
+
+	public static void main(String[] args) {
+	
+		String myName = "Parabola";
+		String myLetter = "a";
+			System.out.println(countChars(myName, myLetter));
+	}
+
+	private static int countChars(String myName, String myLetter) 
+	{
+		int x = myName.length();
+		int p = 0;
+		int c = 0;
+		for (int i = 0; i < x; i++)
+		{
+		
+		if (myName.charAt(p) == myLetter.charAt(0))
+			c++;
+			p++;
+		}
+		return c;
+	}
+
+}
