@@ -1,10 +1,10 @@
-public class test_things {
-
-	public static void main(String[] args) {
-	
+public class test_things
+{
+	public static void main(String[] args) 
+	{
 		String myName = "Parabola";
-		String myLetter = "a";
-			System.out.println(countChars(myName, myLetter));
+		char myLetter = "a";
+		System.out.println(countChars(myName, myLetter));
 	}
 
 	private static int countChars(String myName, String myLetter) 
@@ -13,9 +13,8 @@ public class test_things {
 		int c = 0;
 		for (int i = 0; i < x; i++)
 		{
-		
-		if (myName.charAt(i) == myLetter.charAt(0))
-			c++;
+			if (myName.charAt(i) == myLetter.charAt(0))
+				c++;
 		}
 		return c;
 	}
