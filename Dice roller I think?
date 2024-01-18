@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class Number_d_luffy 
+{
+
+	public static void main(String[] args) 
+	{
+		Scanner factChecker = new Scanner(System.in);
+		
+		String haydenBenedict = factChecker.nextLine();
+		
+		int d = haydenBenedict.indexOf('d');
+		
+		myMethod(haydenBenedict, d);
+		
+		factChecker.close();
+	}
+
+	public static void myMethod(String haydenBenedict, int d)
+	{
+		System.out.println ("The first number is " + haydenBenedict.substring(0, d) + 
+				" and the second number is " + haydenBenedict.substring(d + 1));
+		
+		String numOne = haydenBenedict.substring(0, d);
+		String numTwo = haydenBenedict.substring(d + 1);
+		
+		int a = Integer.valueOf(numOne);
+		int b = Integer.valueOf(numTwo);
+		
+		System.out.println ("Their sum is " + (a + b));
+	}
+}
