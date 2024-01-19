@@ -1,12 +1,12 @@
-public class test_things
+public class test_things 
 {
-	public static void main(String[] args) 
-	{
+	public static void main(String[] args) {
+	
 		String myName = "Parabola";
-		char myLetter = "a";
-		System.out.println(countChars(myName, myLetter));
+		String myLetter = "a";
+			System.out.println(countChars(myName, myLetter));
 	}
-
+	
 	private static int countChars(String myName, String myLetter) 
 	{
 		int x = myName.length();
