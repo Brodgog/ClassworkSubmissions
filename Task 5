@@ -1,0 +1,26 @@
+import java.util.Scanner;
+public class Space_remover {
+	public static void main(String[] args)
+	{
+		Scanner wordCombiner = new Scanner (System.in);
+		String oneWord = wordCombiner.nextLine();
+		String blank = "";
+		//int a = twoWord.indexOf(' ');
+	myMeth(oneWord, blank);
+	System.out.print(myMeth(oneWord, blank));
+		wordCombiner.close();
+	}
+	public static String myMeth (String oneWord, String blank)
+	{
+		int x = oneWord.length();
+	for(int i = 0; i < x; i++)
+	{
+		if (oneWord.charAt(i) != ' ')
+		{
+		blank += oneWord.charAt(i);
+	}
+}
+	return blank;
+	}
+	
+}
