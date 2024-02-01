@@ -1,7 +1,7 @@
 public class test_things 
 {
 	public static void main(String[] args) {
-	
+		//Declares two strings... one for the word and one for the letter
 		String myName = "Parabola";
 		String myLetter = "a";
 			System.out.println(countChars(myName, myLetter));
@@ -9,13 +9,19 @@ public class test_things
 	
 	private static int countChars(String myName, String myLetter) 
 	{
+		//int c will be the number of times that letter shows up
+		//int x will be the length of the word
 		int x = myName.length();
 		int c = 0;
+		//This loop will check every letter in the word and see if it matches with
+		//the string myLetter
 		for (int i = 0; i < x; i++)
 		{
+			//if it matches, it will add one to int c
 			if (myName.charAt(i) == myLetter.charAt(0))
 				c++;
 		}
+		//Once the loop ends, it will return int c
 		return c;
 	}
 }
