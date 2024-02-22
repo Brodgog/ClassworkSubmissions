@@ -1,0 +1,28 @@
+public class Grades_GIMME 
+{
+
+	private double scienceGrade;
+	private double mathGrade;
+	private double theologyGrade;
+	
+	private int gradeLevel;
+	String studentName;
+	
+	public Grades_GIMME(double a, double b, double c, int d, String e)
+	{
+		scienceGrade = a;
+		mathGrade = b;
+		theologyGrade = c;
+		gradeLevel = d;
+		studentName = e;
+	}
+	private double getGPA()
+	{
+		double G = (scienceGrade + mathGrade + theologyGrade)/3;
+		return G;
+	}
+	public void getIntro()
+	{
+		System.out.println("I am a student in grade " + gradeLevel + ". My name is " + studentName + ". My average GPA is " + getGPA() + ".");
+	}
+}
