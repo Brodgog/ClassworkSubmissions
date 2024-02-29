@@ -1,0 +1,37 @@
+
+public class Array_intro_practice {
+
+	public static void main(String[] args) 
+	{
+		
+		//declare an int array with values
+		int []arr = {1,2,3};
+		int [] blah = {1,2,4};
+				
+		//declare an int... this will divide the elements by two
+		int i = 2;
+		System.out.print(blah[i]);
+				
+		//call method that gives first and last element
+		giveFirstAndLastArray(arr);
+				
+		//call method that will divide the element by two
+		divideElementByTwo(blah, 1);
+	}
+		//Divide the two elements by two and return
+		private static int[]divideElementByTwo(int[] blah,int i)
+		{
+			int a = blah[i];
+			int b = a/2;
+			blah[i] = b;
+			return blah;
+		}
+		//It will return the first and last element of the array when passed through
+		private static int[]giveFirstAndLastArray(int[] arr)
+		{
+			int x = arr[0];
+			int y = arr[arr.length-1];
+			int[] nums = {x,y};
+			return nums;
+		}
+}
