@@ -1,0 +1,30 @@
+
+public class Prev_next_element_array {
+
+	public static void main(String[] args) {
+		
+		//declare a double array that has 5 values
+		double arr[] = { 1.2, 1.4, 1.8, 2.3, 2.7};
+		
+		//declare an int that provides the index for the array
+		int index = 3;
+		
+		//call a method that will do the task
+		printPrevnextElement(arr, index);
+
+	}
+	
+	private static void printPrevnextElement (double arr[], int index)
+	{
+		//declare new double... num1 will be the number before the chosen number within the array
+		double num1 = arr[index -1];
+		
+		//declare new double... num2 will be the number after the chosen number within the array
+		double num2 = arr[index +1];
+		
+		//print the statement
+		System.out.println ("The number before the element at index 2 is " + num1 
+				+ " and the number after the element at index 2 is " + num2 + ".");
+	}
+
+}
