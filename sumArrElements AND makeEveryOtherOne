@@ -1,0 +1,69 @@
+
+public class SumArrElements {
+
+	public static void main(String[] args) 
+	{
+		// this array is for makeEveryOtherOne. int values only
+		int[]nums = {1, 2, 3, 4, 5, 6}; 
+		
+		// this array is for sumArrElements. double values only
+		double arr[] = {1.2, 2.6, 3.1, 4.9, 5.7, 8.3};
+		
+		sumArrElements(arr);
+		makeEveryOtherOne(nums);
+	}
+	
+	//call method that will add values together
+	private static void sumArrElements(double arr[])
+	{
+		//i is the traverser
+		int i = 0;
+		
+		//sums will be the inital value of the sum
+		double sums = 0;
+		
+		//this loop will add each value to sums until loop is done
+		for (;i < arr.length; i++)
+		{	
+			sums += arr[i];
+		}
+		
+		//print the sum
+		System.out.println(sums);
+	}
+	
+	//call method that will replace every other value to one
+	private static void makeEveryOtherOne(int[] nums)
+	{
+		//t is traverser
+		int t = 1;
+		
+		//prints the first brace
+		System.out.print("{");
+		
+		//this loop will scan every number and increase the traverser by 2. 
+		//this will help skip every other number
+		for(;t < nums.length; t+=2)
+		{
+			nums[t] = 1;
+		}	
+	
+		//i is traverser for inner loop
+		int i = 0;
+		
+		//this loop will add and print a comma after every number
+		for (; i < nums.length; i++)
+		{
+			System.out.print(nums[i]);
+			
+			if(i!= nums.length-1)
+			{
+				System.out.print(", ");
+			}
+			
+		}
+		
+		//print the last brace
+		System.out.print("}");
+		}
+	}
