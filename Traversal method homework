@@ -1,8 +1,9 @@
+
 public class traverse_method {
 
 	public static void main(String[] args) {
 		//declare an int array and double array
-		int arr[] = {1, 5, 7, 2, 4, 3};
+		int arr[] = {1, 4, 9, 8, 5, 6};
 		double nums[] = {1.1, 2.2, 3.3, 4.4, 5.5};
 		
 		//call methods needed for specific task
@@ -17,22 +18,20 @@ public class traverse_method {
 	 */
 	private static int highestNumber (int arr[])
 	{
-		//two ints are declared.
-		int b = 0;
+		//int a is declared.
 		int a = 0;
 		
-		//this for loop will turn 'a' into the number the array is at.
-		for (int i = 0; i < arr.length; i++)
+		//this for loop will turn 'a' into the number the array is at, but backwards.
+		for (int i = 0; i < arr.length-1; i++)
 		{
 			 a = arr[i];
 			 
-			 //this if statement will compare a and b. If true, b changes into the value of a. If not,
-			 // b turns into a
-			if (b > a)
+			 //this if statement will compare a to the next value after in the array. If true,
+			 //that next number will become a. If not, a stays the same.
+			if (a < arr[i +1])
 			{
-				a = b;
+				a = arr[i+1];
 			}
-				b = a;
 		}
 		return a;
 	}
