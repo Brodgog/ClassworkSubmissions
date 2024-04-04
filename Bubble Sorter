@@ -1,0 +1,102 @@
+
+public class Bubble_Sort {
+/*
+ * Task 1: Create a new class BubbleSorter that has a main method.
+ */
+	public static void main(String[] args) {
+		
+		// create a method to create numbers
+		makeRandom();
+		
+		//declare an int that transforms the method's output into an int
+		int[] randomNumbers = makeRandom();
+		
+		//declare an int that transforms the bubblesort method's output into an int
+		int[] nums = bubbleSort(randomNumbers);
+		
+		//create a method that will print the values
+		printArr(nums);
+	}
+	
+	/*
+	 * Give the method a javadoc comment and line comments that explain what each step does. 
+	 * Use this method to declare an int array randomNumbers. 
+	 */
+	private static int[] makeRandom() {
+		
+		//declare an int array with 2000 elements
+		int[] bigNums = new int[2000];
+		
+		//declare an int that is the length of the nums array
+		int len = bigNums.length;
+		
+		//this for loop will work as long as int i is less than the length of the nums array
+		for (int i = 0; i < len; i++)
+		{
+			//declare an int that is randomly picked from 1 to 1000
+			int randomNumber = (int) ((Math.random() * 1000) + 1);
+			
+			//bigNums will become that new number
+			bigNums[i] = randomNumber;
+			
+		}
+		return bigNums;
+	}
+	
+	/*
+	 * Task 3: Create a method bubbleSort using Bubble Sort to sort the array. 
+	 * The method should be passed the array, and return a totally new one that 
+	 * is a sorted version of the original.
+	 */
+	private static int[] bubbleSort(int[] nums)
+	{
+		//create a for loop that will run by how long the nums array is
+		for (int j=0; j< nums.length; j++)
+		{
+		//create a for loop inside the loop that will help sort the numbers
+		for (int i=0; i< nums.length-1; i++)
+		{
+			//this if statement will switch the two numbers if one is greater than the other.
+			//if not, it stays
+			if (nums[i] > nums[i+1])
+			{
+				//declare an int that will help switch the two numbers
+				int swtch = nums[i];
+				nums[i] = nums[i+1];
+				nums [i+1] = swtch;
+				
+				
+			}
+		}
+		}
+		return nums;
+	}
+
+	/*
+	 * Task 4: Use the printArr method we created in the past to print the final 
+	 * sorted array, just to make sure everything works. 
+	 */
+	private static void printArr(int[] nums)
+	{
+		//declare an int that will be passed through the loop. This is the traverser
+		int i = 0;
+		
+		//print the first brace
+		System.out.print("{");
+		
+		//this loop will print the values as long as i is less than the length of the array
+		for (;i < nums.length; i++)
+		{	
+			System.out.print(nums[i]);
+			
+			//this boolean will print as long as i less than the length of the array minus one
+			if (i!= nums.length-1)
+			{
+				System.out.print(", ");
+			}
+		}
+		//print out the last brace to complete the array
+		System.out.print("}");
+	}
+	
+}
