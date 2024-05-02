@@ -1,0 +1,88 @@
+import java.util.ArrayList;
+
+public class Arrays_Sorters_Arraylist {
+/*
+ * Task 1: In the main method, instantiate two ArrayLists nums and names of Integers 
+ * (remember ints wouldn't work for ArrayLists) and Strings respectively. 
+ * Fill them with five unsorted values (nums out of numerical order and names out 
+ * of alphabetical order). 
+ */
+	public static void main(String[] args) {
+		
+		//declare a list that has integer values that's not in numerical order.
+		ArrayList <Integer> nums = new ArrayList<Integer>();
+		nums.add(1);
+		nums.add(7);
+		nums.add(4);
+		nums.add(6);
+		nums.add(9);
+		
+		//declare a list that has string values that's not in alphabetical order.
+		ArrayList <String> names = new ArrayList<String>();
+		names.add("Hayden");
+		names.add("Eddie");
+		names.add("Brogan");
+		names.add("Gabe");
+		names.add("Justin");
+		
+		//declare the two methods needed to complete the tasks.
+		bubbleSortNumbers(nums);
+		bubbleSortStrings(names);
+	}
+/*
+ * Task 2: Create a void method bubbleSortNumbers that is passed an ArrayList and 
+ * bubble sorts it just like we did for arrays. 
+ */
+	private static void bubbleSortNumbers(ArrayList <Integer> nums)
+	{
+		//create a for loop that will go through the values in the array.
+		for (int i=0; i< nums.size(); i++)
+		{
+		//create another for loop that will check the values in a certain
+		//area of the array.
+		for (int j=0; j< nums.size() - 1; j++)
+		{
+			//create an if statement that makes sure the selected value is 
+			//greater than the value after that one.
+			if(nums.get(j) > nums.get(j + 1))
+				{
+					//create a new integer that'll set the selected value
+					//to the value after it.
+					Integer place = nums.set(j, nums.get(j + 1));
+					//set the value after into the initial value.
+					nums.set(j + 1, place);
+				}
+		}
+	}
+		//print the array out.
+		System.out.println(nums);
+	}
+/*
+ * Task 3: Create a void method bubbleSortStrings that is passed an ArrayList and 
+ * bubble sorts it into alphabetical order. 
+ */
+	private static void bubbleSortStrings(ArrayList <String> names)
+	{
+		//create a for loop that will go through the strings in the array.
+		for (int i=0; i< names.size(); i++)
+		{
+		//create another for loop that will check the strings in a certain
+		//area of the array.
+		for (int j=0; j< names.size() - 1; j++)
+		{
+			//create an if statement that compares the selected string to the string
+			//after. Then,it'll check if it's value is greater than 0.
+			if (names.get(j + 1).compareTo(names.get(j)) < 0)
+				{
+				//create a new integer that'll set the selected string
+				//to the string after it.
+				String place = names.set(j, names.get(j + 1));
+				//set the value after into the initial value.
+				names.set(j + 1, place);
+				}
+		}
+	}
+		//print the array out.
+		System.out.println(names);
+	}
+}
